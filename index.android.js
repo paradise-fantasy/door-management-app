@@ -4,6 +4,8 @@
  * @flow
  */
 
+ const OPEN_DOOR_ADDRESS = 'http://129.241.209.244:5000/api/open-door';
+
 import React, { Component } from 'react';
 import {
   AppRegistry,
@@ -24,7 +26,7 @@ class DoorManagementApp2 extends Component {
 
   _onPressIn() {
     console.log('press in');
-    fetch('http://google.com').then(res => console.log(res));
+    fetch(OPEN_DOOR_ADDRESS).then(response => console.log(response));
     this.setState({ active: true });
   }
 
